@@ -69,7 +69,6 @@ export async function main(denops: Denops) {
       const event = arg1 as DdcEvent;
       if (event == "InsertLeave") {
         await denops.call("ddc#_clear");
-        return;
       }
 
       const maybe = await contextBuilder.createContext(denops, event);
